@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+* {
+    font-family :  'Fraunces', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+body {
+
+    font-family: Montserrat;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+    background: #fff;
+    width: 40rem;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 0.9rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: Fraunces;
+    font-weight: 700;
+    color: var(--Very-dark-blue)
+}
+
+p {
+    color: var(--Dark-grayish-blue);
+}
+
+.left,
+.product-info {
+    width: 50%;
+}
+
+.left img {
+    width: 300px;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 30px 20px;
+}
+
+.perfume {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--Dark-grayish-blue);
+}
+
+.card-price {
+    display: flex;
+    align-items: center;
+
+    gap: 1.2rem;
+}
+
+.card-price .current {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--Dark-cyan);
+
+}
+
+.card-price .old {
+    font-weight: 700;
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+.button{
+    width:100%;
+    border:0;
+    outline: 0;
+    display: flex;
+    background: var(--Dark-cyan);
+    border: 1px solid transparent;    
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-family:"  Montserrat";
+    padding:1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:570px){
+    .wrapper{
+        width:100vw;
+        height:100vh;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+        width:100vw;
+        height:100vh;
+        border-radius: 0;
+    }
+    .left,
+.product-info {
+    width: 100%;
+}
+.left{
+    width: 100%;
+   height: auto;
+}
+.left img{
+    content:url("./images/image-product-mobile.jpg");
+    width: 100%;
+    height: 100%;
+}
+h2{
+    font-size: 1.5rem;
+}
+.button{
+    padding: 0.5rem 1rem;
+}
+}
